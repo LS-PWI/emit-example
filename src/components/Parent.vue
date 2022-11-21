@@ -1,6 +1,6 @@
 <script setup>
   import { ref } from 'vue'
-  import ChildComponent from '../components/Child.vue'
+  import ChildComponent from './Child.vue'
   const count = ref(0)
 </script>
 
