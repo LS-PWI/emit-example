@@ -1,5 +1,5 @@
 <template>
-    <button @click="$emit('add', Math.random())">
+    <button v-on:click="$emit('add', Math.random())">
         Add Math.random()
     </button>
 </template>

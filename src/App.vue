@@ -1,16 +1,19 @@
 <script setup>
 import {RouterView } from 'vue-router'
-import emitExampleText from './components/emitExampleText.vue'
+import EmitExampleText from './components/EmitExampleText.vue'
+import Parent from "@/components/Parent.vue";
 </script>
 
 <template>
   <header>
     <div class="wrapper">
-      <emitExampleText />
+      <EmitExampleText />
     </div>
   </header>
+  <main>
+    <Parent />
+  </main>
 
-  <RouterView />
 </template>
 
 <style scoped>

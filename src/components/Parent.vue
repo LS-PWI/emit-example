@@ -1,10 +1,17 @@
-<script setup>
-  import { ref } from 'vue'
-  import ChildComponent from './Child.vue'
-  const count = ref(0)
+<script>
+  import Child from "@/components/Child.vue";
+  export default {
+    components: {Child},
+    data() {
+      return {
+        count: 0
+      }
+    }
+  }
 </script>
 
 <template>
-  <ChildComponent @add="(i) => count += i" /> 
+  <!-- https://vuejs.org/guide/components/events.html#emitting-and-listening-to-events -->
+  <Child v-on:add="(i) => count += i" />
   <p>Count: {{ count }}</p>
 </template>
