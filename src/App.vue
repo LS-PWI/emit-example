@@ -1,7 +1,15 @@
-<script setup>
-import {RouterView } from 'vue-router'
-import EmitExampleText from './components/EmitExampleText.vue'
+<script>
+import { RouterView } from "vue-router";
+import EmitExampleText from "@/components/EmitExampleText.vue";
 import Parent from "@/components/Parent.vue";
+export default {
+  components: { Parent, EmitExampleText },
+  methods: {
+    hello() {
+      console.log("Hello");
+    },
+  },
+};
 </script>
 
 <template>
@@ -13,7 +21,6 @@ import Parent from "@/components/Parent.vue";
   <main>
     <Parent />
   </main>
-
 </template>
 
 <style scoped>
